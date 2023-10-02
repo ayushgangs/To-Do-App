@@ -1,78 +1,80 @@
-*{
+* {
     box-sizing: border-box;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
-.parent{
-    /* background-color: red; */
+.parent {
+    /* background-color: blue; */
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: relative;
-    
+
 }
 
-.header{
+.header {
     background-color: rgb(50, 179, 223);
-    height:10%;
+    height: 10%;
     width: 100%;
-    font-weight:bolder;
+    font-weight: bolder;
     font-size: 25px;
-    display:flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    
+
 }
 
-.todo{
+.todo {
     /* background-color: darkgoldenrod; */
     display: flex;
     align-items: center;
     margin-right: 60%;
 }
 
-.plus{
+.plus {
     background-color: blue;
-    color:white;
-    border-radius: 25px; 
-    height: 40%;
-    width: 2%;
-    font-size: 25px;
+    color: white;
+    border-radius: 3vw;
+    height: 3vw;
+    width: 3vw;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.middle{
+.middle {
     background-color: coral;
-    height:80%;
-    width:100%; 
+    height: 80%;
+    width: 100%;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     overflow: auto;
     padding-top: 1%;
 
 }
 
-.box{
+.box {
     /* background-color: red; */
-    height:32%;
-    width:15%;
-    margin-left: 1%;
+    height: 220px;
+    width: 280px;
+    margin-left: 0.5%;
     margin-bottom: 1%;
-    /* display: none; */
-    
 }
 
 
-.boxhead{
+.boxhead {
     background-color: purple;
-    height:20%;
-    width:100%;
+    height: 20%;
+    width: 100%;
     display: flex;
-    
-    
+
+
 }
 
-.remaining-boxhead{
+.remaining-boxhead {
     /* background-color: yellow; */
     height: 100%;
     width: 65%;
@@ -87,7 +89,7 @@
     color: white;
 }
 
-.boxhead-btns{
+.boxhead-btns {
     /* background-color: gray; */
     height: 100%;
     width: 35%;
@@ -96,25 +98,25 @@
     align-items: center;
 }
 
-.boxhead-btns button{
+.boxhead-btns button {
     background-color: greenyellow;
-    height:50%;
+    height: 50%;
     width: 23%;
     border-radius: 15px;
     font-size: 15px;
     font-weight: 600;
-    
+
 }
 
-.boxhead-btns i{
+.boxhead-btns i {
     /* background-color: red; */
-    font-size: 160%; 
+    font-size: 160%;
     color: white;
-    
+
 }
 
 
-.boxbody{
+.boxbody {
     background-color: gainsboro;
     height: 80%;
     width: 100%;
@@ -124,86 +126,104 @@
     overflow: auto;
 }
 
-
-.popup{
-    background-color: gainsboro;
-    height: 50%;
-    width: 20%;
-    /* align-self: center; */
-    border-radius: 20px;
-    top: 25%;
-    left: 40%;
+.popup-wrap {
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
     display: none;
-    outline: black solid 1px;
-    
 }
-.cardhead{
+
+
+.popup {
+    background-color: gainsboro;
+    height: 500px;
+    width: 400px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: black solid 1px;
+
+}
+
+.cardhead {
     /* background-color: aqua; */
-    height:13%;
+    height: 13%;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    
+    align-items: center;
 }
 
 
-.cross{
+.cross {
 
     background-color: darkgrey;
     margin-left: auto;
-    width:8%;
+    width: 8%;
     border-top-right-radius: 20px;
     border-style: hidden;
     font-size: 20px;
 }
 
-.newtask{
+.newtask {
     /* background-color: coral; */
     height: 60%;
     width: 60%;
-    margin-left: 20%;
-    font-size:32px;
+    margin: 0 auto;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.heading-inp1{
+.heading-inp1 {
     /* background-color: blueviolet; */
     height: 10%;
     width: 80%;
     padding-left: 3%;
-    margin-left: 10%;
     margin-bottom: 5%;
     border-radius: 5px;
     font-size: 25px;
     border-style: hidden;
 }
 
-.heading-inp2{
+.heading-inp2 {
     /* background-color: aqua; */
     height: 55%;
+    resize: none;
 }
 
-.add{
+.add {
     /* background-color: red; */
     height: 10%;
     width: 80%;
-    margin-left: 10%;
     border-radius: 5px;
+    border-style: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.addbtn {
+
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border-style: hidden;
     font-size: 25px;
-    border-style: hidden; 
-    
+    font-weight: bold;
 }
 
-.addbtn{
-    
+.editbtn {
     height: 100%;
     width: 100%;
     border-radius: 5px;
@@ -212,21 +232,39 @@
     font-weight: bold;
 }
 
-.editbtn{
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    border-style: hidden;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.footer{
+.footer {
     background-color: green;
     color: white;
-    height:10%;
+    height: 10%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size:20px;
+    font-size: 20px;
+}
+
+
+
+
+@media(max-width: 485px) {
+    .popup {
+        height: 60vh;
+        width: 80vw;
+    }
+
+    .newtask {
+        font-size: 6vw;
+    }
+
+    .heading-inp1 {
+        font-size: 6vw;
+    }
+
+    .addbtn {
+        font-size: 5vw;
+    }
+
+    .footer {
+        text-align: center;
+    }
 }
